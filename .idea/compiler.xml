@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="datatech-admin" />
+        <module name="datatech-admin-inf" />
+        <module name="datatech-common" />
+        <module name="datatech-gateway" />
+        <module name="datatech-monitor" />
+        <module name="datatech-upms-client" />
+        <module name="datatech-upms-common" />
+        <module name="datatech-upms-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="datatech-cache" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="datatech-admin" options="-parameters" />
+      <module name="datatech-admin-inf" options="-parameters" />
+      <module name="datatech-cache" options="-parameters" />
+      <module name="datatech-common" options="-parameters" />
+      <module name="datatech-control" options="" />
+      <module name="datatech-gateway" options="-parameters" />
+      <module name="datatech-modules" options="" />
+      <module name="datatech-monitor" options="-parameters" />
+      <module name="datatech-upms-client" options="-parameters" />
+      <module name="datatech-upms-common" options="-parameters" />
+      <module name="datatech-upms-server" options="-parameters" />
+    </option>
+  </component>
+</project>
