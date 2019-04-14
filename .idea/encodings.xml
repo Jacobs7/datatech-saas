@@ -2,11 +2,14 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/datatech-cache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/datatech-cms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/datatech-cms/datatech-cms-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/datatech-cms/datatech-cms-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-control" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-control/datatech-monitor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/datatech-generater" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-modules" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-modules/datatech-admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-modules/datatech-admin-inf" charset="UTF-8" />

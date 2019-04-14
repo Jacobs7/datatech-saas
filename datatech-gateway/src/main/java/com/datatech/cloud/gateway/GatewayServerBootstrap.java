@@ -14,7 +14,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableAceAuthClient
-//@EnableFeignClients({"com.github.wxiaoqi.security.auth.client.feign","com.github.wxiaoqi.security.gate.feign"})
 @EnableFeignClients({"com.datatech.cloud.upms.client.feign","com.datatech.cloud.gateway.feign"})
 public class GatewayServerBootstrap {
     public static void main(String[] args) {
