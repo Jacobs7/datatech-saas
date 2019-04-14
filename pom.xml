@@ -152,6 +152,8 @@
         <module>datatech-control</module>
         <module>datatech-modules</module>
         <module>datatech-gateway</module>
+        <module>datatech-cms</module>
+        <module>datatech-generater</module>
 
     </modules>
 

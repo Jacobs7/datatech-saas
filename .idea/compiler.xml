@@ -8,8 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="datatech-admin" />
         <module name="datatech-admin-inf" />
+        <module name="datatech-cms-consumer" />
+        <module name="datatech-cms-provider" />
         <module name="datatech-common" />
         <module name="datatech-gateway" />
+        <module name="datatech-generater" />
         <module name="datatech-monitor" />
         <module name="datatech-upms-client" />
         <module name="datatech-upms-common" />
@@ -25,9 +28,13 @@
       <module name="datatech-admin" options="-parameters" />
       <module name="datatech-admin-inf" options="-parameters" />
       <module name="datatech-cache" options="-parameters" />
+      <module name="datatech-cms" options="" />
+      <module name="datatech-cms-consumer" options="-parameters" />
+      <module name="datatech-cms-provider" options="-parameters" />
       <module name="datatech-common" options="-parameters" />
       <module name="datatech-control" options="" />
       <module name="datatech-gateway" options="-parameters" />
+      <module name="datatech-generater" options="-parameters" />
       <module name="datatech-modules" options="" />
       <module name="datatech-monitor" options="-parameters" />
       <module name="datatech-upms-client" options="-parameters" />
