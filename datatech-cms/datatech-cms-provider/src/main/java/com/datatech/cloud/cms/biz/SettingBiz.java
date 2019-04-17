@@ -1,10 +1,9 @@
-package com.datatech.cloud.cms.consumer.biz;
-
-import org.springframework.stereotype.Service;
+package com.datatech.cloud.cms.biz;
 
 import com.datatech.cloud.cms.entity.Setting;
 import com.datatech.cloud.cms.mapper.SettingMapper;
 import com.datatech.cloud.common.biz.BaseBiz;
+import org.springframework.stereotype.Service;
 
 /**
  * 网站配置
