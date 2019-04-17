@@ -1,8 +1,8 @@
-package com.datatech.cloud.cms.config;
+package com.datatech.cloud.cms.consumer.config;
 
+import com.datatech.cloud.common.handler.GlobalExceptionHandler;
 import com.datatech.cloud.upms.client.interceptor.ServiceAuthRestInterceptor;
 import com.datatech.cloud.upms.client.interceptor.UserAuthRestInterceptor;
-import com.datatech.cloud.common.handler.GlobalExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -50,14 +50,17 @@ public class WebConfiguration implements WebMvcConfigurer {
     private ArrayList<String> getIncludePathPatterns() {
         ArrayList<String> list = new ArrayList<>();
         String[] urls = {
-                "/element/**",
-                "/gateLog/**",
-                "/group/**",
-                "/groupType/**",
-                "/menu/**",
-                "/user/**",
-                "/api/permissions",
-                "/api/user/un/**"
+                "/articleCategory/**",
+                "/article/**",
+                "/articleTag/**",
+                "/category/**",
+                "/categoryTag/**",
+                "/comment/**",
+                "/page/**",
+                "/setting/**",
+                "/system/**",
+                "/tag/**",
+                "/topic/**"
         };
         Collections.addAll(list, urls);
         return list;

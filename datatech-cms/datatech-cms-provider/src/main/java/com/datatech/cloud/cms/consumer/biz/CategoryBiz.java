@@ -1,4 +1,4 @@
-package com.datatech.cloud.cms.biz;
+package com.datatech.cloud.cms.consumer.biz;
 
 import org.springframework.stereotype.Service;
 
