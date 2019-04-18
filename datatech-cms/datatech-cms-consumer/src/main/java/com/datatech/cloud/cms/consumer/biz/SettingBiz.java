@@ -1,4 +1,4 @@
-package com.datatech.cloud.cms.biz;
+package com.datatech.cloud.cms.consumer.biz;
 
 import com.datatech.cloud.cms.entity.Setting;
 import com.datatech.cloud.cms.mapper.SettingMapper;

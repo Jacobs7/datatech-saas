@@ -59,8 +59,8 @@ public class WebConfiguration implements WebMvcConfigurer {
                 "/page/**",
                 "/setting/**",
                 "/system/**",
-                "/tag/**",
-                "/topic/**"
+                "/api/permissions",
+                "/api/user/un/**"
         };
         Collections.addAll(list, urls);
         return list;
