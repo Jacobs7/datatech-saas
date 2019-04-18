@@ -1,8 +1,8 @@
-package com.datatech.cloud.cms.config;
+package com.datatech.cloud.cms.consumer.config;
 
+import com.datatech.cloud.common.handler.GlobalExceptionHandler;
 import com.datatech.cloud.upms.client.interceptor.ServiceAuthRestInterceptor;
 import com.datatech.cloud.upms.client.interceptor.UserAuthRestInterceptor;
-import com.datatech.cloud.common.handler.GlobalExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

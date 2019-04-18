@@ -1,10 +1,9 @@
-package com.datatech.cloud.cms.biz;
-
-import org.springframework.stereotype.Service;
+package com.datatech.cloud.cms.consumer.biz;
 
 import com.datatech.cloud.cms.entity.ArticleCategory;
 import com.datatech.cloud.cms.mapper.ArticleCategoryMapper;
 import com.datatech.cloud.common.biz.BaseBiz;
+import org.springframework.stereotype.Service;
 
 /**
  * 文章类目关联表

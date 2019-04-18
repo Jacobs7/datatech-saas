@@ -1,10 +1,9 @@
-package com.datatech.cloud.cms.biz;
-
-import org.springframework.stereotype.Service;
+package com.datatech.cloud.cms.consumer.biz;
 
 import com.datatech.cloud.cms.entity.CategoryTag;
 import com.datatech.cloud.cms.mapper.CategoryTagMapper;
 import com.datatech.cloud.common.biz.BaseBiz;
+import org.springframework.stereotype.Service;
 
 /**
  * 类目标签关联表
@@ -15,4 +14,5 @@ import com.datatech.cloud.common.biz.BaseBiz;
  */
 @Service
 public class CategoryTagBiz extends BaseBiz<CategoryTagMapper,CategoryTag> {
+
 }
