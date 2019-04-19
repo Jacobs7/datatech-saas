@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.datatech.cloud.cms.mapper.ArticleMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.datatech.cloud.cms.entity.Article" id="BaseResultMap">
+        <result property="articleId" column="article_id"/>
+        <result property="topicId" column="topic_id"/>
+        <result property="title" column="title"/>
+        <result property="author" column="author"/>
+        <result property="fromurl" column="fromurl"/>
+        <result property="image" column="image"/>
+        <result property="keywords" column="keywords"/>
+        <result property="description" column="description"/>
+        <result property="type" column="type"/>
+        <result property="allowcomments" column="allowcomments"/>
+        <result property="status" column="status"/>
+        <result property="content" column="content"/>
+        <result property="userId" column="user_id"/>
+        <result property="readnumber" column="readnumber"/>
+        <result property="top" column="top"/>
+        <result property="systemId" column="system_id"/>
+        <result property="ctime" column="ctime"/>
+        <result property="orders" column="orders"/>
+
+        <result property="username" column="username"/>
+    </resultMap>
+    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultMap="BaseResultMap">
+        select * from cms_article article
+          left join upms_user upuser on article.user_id = upuser.user_id
+    </select>
+</mapper>

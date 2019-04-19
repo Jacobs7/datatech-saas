@@ -51,7 +51,7 @@ public class WebConfiguration implements WebMvcConfigurer {
         ArrayList<String> list = new ArrayList<>();
         String[] urls = {
                 "/articleCategory/**",
-                "/article/**",
+                 "/article/**",
                 "/articleTag/**",
                 "/category/**",
                 "/categoryTag/**",

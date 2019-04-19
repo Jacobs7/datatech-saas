@@ -11,6 +11,7 @@
 
     <artifactId>datatech-cms-provider</artifactId>
 
+
     <properties>
         <hystrix.version>1.5.12</hystrix.version>
         <!-- MyBatis Generator -->
