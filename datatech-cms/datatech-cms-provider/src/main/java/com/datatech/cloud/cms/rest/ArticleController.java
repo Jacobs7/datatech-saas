@@ -3,6 +3,8 @@ package com.datatech.cloud.cms.rest;
 
 import com.datatech.cloud.cms.biz.ArticleBiz;
 import com.datatech.cloud.cms.entity.Article;
+import com.datatech.cloud.cms.rpc.service.ArticleService;
+import com.datatech.cloud.cms.vo.ArticleInManager;
 import com.datatech.cloud.common.msg.TableResultResponse;
 import com.datatech.cloud.common.rest.BaseController;
 import com.github.pagehelper.PageHelper;
@@ -26,6 +28,9 @@ public class ArticleController extends BaseController<ArticleBiz,Article> {
 
     @Autowired
     ArticleBiz articleBiz;
+
+    @Autowired
+    ArticleService articleService;
 
     @RequestMapping(value = "/datatech", method = RequestMethod.GET)
     public @ResponseBody

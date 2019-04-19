@@ -71,7 +71,6 @@ public class Article implements Serializable {
     @Column(name = "user_id")
     private Integer userId;
 
-    private String userName;
 
 
 	

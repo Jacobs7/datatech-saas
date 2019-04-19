@@ -45,7 +45,8 @@
             article.top top,
             article.system_id systemId,
             article.ctime ctime,
-            article.orders orders
+            article.orders orders,
+            upuser.username
         from cms_article article
         left join upms_user upuser on article.user_id = upuser.user_id
     </select>
