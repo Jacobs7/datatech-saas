@@ -24,10 +24,29 @@
         <result property="ctime" column="ctime"/>
         <result property="orders" column="orders"/>
 
-        <result property="username" column="username"/>
+        <result property="userName" column="username"/>
     </resultMap>
-    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultMap="BaseResultMap">
-        select * from cms_article article
-          left join upms_user upuser on article.user_id = upuser.user_id
+    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultType="map">
+        select
+            article.article_id articleId,
+            article.topic_id topicId,
+            article.title title,
+            article.author author,
+            article.fromurl fromurl,
+            article.image image,
+            article.keywords keywords,
+            article.description description,
+            article.type type,
+            article.allowcomments allowcomments,
+            article.status status,
+            article.content content,
+            article.user_id userId,
+            article.readnumber readnumber,
+            article.top top,
+            article.system_id systemId,
+            article.ctime ctime,
+            article.orders orders
+        from cms_article article
+        left join upms_user upuser on article.user_id = upuser.user_id
     </select>
 </mapper>
