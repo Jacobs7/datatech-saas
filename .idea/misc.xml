@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/datatech-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/datatech-cms/datatech-cms-consumer/pom.xml" />
       </set>
     </option>
   </component>

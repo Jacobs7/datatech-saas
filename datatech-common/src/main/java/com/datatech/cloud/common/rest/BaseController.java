@@ -48,6 +48,7 @@ public class BaseController<Biz extends BaseBiz,Entity> {
         baseBiz.updateSelectiveById(entity);
         return new ObjectRestResponse<Entity>();
     }
+
     @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     @ResponseBody
     public ObjectRestResponse<Entity> remove(@PathVariable int id){

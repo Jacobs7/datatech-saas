@@ -2,6 +2,9 @@ package com.datatech.cloud.cms.mapper;
 
 import com.datatech.cloud.cms.entity.Article;
 import tk.mybatis.mapper.common.Mapper;
+import tk.mybatis.mapper.entity.Example;
+
+import java.util.List;
 
 /**
  * 文章表
@@ -12,5 +15,7 @@ import tk.mybatis.mapper.common.Mapper;
  */
 
 public interface ArticleMapper extends Mapper<Article> {
+    //自定义查询
+    List<Article> queryForPageBiz(Example example);
 	
 }

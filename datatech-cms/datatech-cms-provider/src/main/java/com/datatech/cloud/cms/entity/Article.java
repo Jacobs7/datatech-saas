@@ -1,5 +1,7 @@
 package com.datatech.cloud.cms.entity;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
@@ -13,6 +15,7 @@ import javax.persistence.*;
  * @date 2019-04-13 15:31:18
  */
 @Table(name = "cms_article")
+@Data
 public class Article implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -67,6 +70,10 @@ public class Article implements Serializable {
 	    //发布人id
     @Column(name = "user_id")
     private Integer userId;
+
+    private String userName;
+
+
 	
 	    //阅读数量
     @Column(name = "readnumber")
