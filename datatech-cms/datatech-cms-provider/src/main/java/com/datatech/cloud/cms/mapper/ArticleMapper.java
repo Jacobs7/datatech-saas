@@ -6,6 +6,7 @@ import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 文章表
@@ -17,6 +18,7 @@ import java.util.List;
 
 public interface ArticleMapper extends Mapper<Article> {
     //自定义查询
-    List<ArticleInManager> queryForPageBiz(Example example);
+//    List<Article> queryForPageBiz(Example example);
+    public List<Map<String, Object>> queryForPageBiz(Map<String, Object> map);
 	
 }

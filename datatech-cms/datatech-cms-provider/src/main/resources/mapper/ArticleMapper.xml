@@ -24,52 +24,30 @@
         <result property="ctime" column="ctime"/>
         <result property="orders" column="orders"/>
 
+        <result property="userName" column="username"/>
     </resultMap>
-
-    <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap  type="java.util.HashMap" id="selectResultMap">
-        <result property="articleId" column="article_id"/>
-        <result property="topicId" column="topic_id"/>
-        <result property="title" column="title"/>
-        <result property="author" column="author"/>
-        <result property="fromurl" column="fromurl"/>
-        <result property="image" column="image"/>
-        <result property="keywords" column="keywords"/>
-        <result property="description" column="description"/>
-        <result property="type" column="type"/>
-        <result property="allowcomments" column="allowcomments"/>
-        <result property="status" column="status"/>
-        <result property="content" column="content"/>
-        <result property="userId" column="user_id"/>
-        <result property="readnumber" column="readnumber"/>
-        <result property="top" column="top"/>
-        <result property="systemId" column="system_id"/>
-        <result property="ctime" column="ctime"/>
-        <result property="orders" column="orders"/>
-
-        <result property="username" column="username"/>
-    </resultMap>
-    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultMap="selectResultMap">
+    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultType="map">
         select
-            article.article_id,
-            article.topic_id,
-            article.title,
-            article.author,
-            article.fromurl,
-            article.image,
-            article.keywords,
-            article.description,
-            article.type,
-            article.allowcomments,
-            article.status,
-            article.content,
-            article.user_id,
-            article.readnumber,
-            article.top,
-            article.system_id,
-            article.ctime,
-            article.orders,
+            article.article_id articleId,
+            article.topic_id topicId,
+            article.title title,
+            article.author author,
+            article.fromurl fromurl,
+            article.image image,
+            article.keywords keywords,
+            article.description description,
+            article.type type,
+            article.allowcomments allowcomments,
+            article.status status,
+            article.content content,
+            article.user_id userId,
+            article.readnumber readnumber,
+            article.top top,
+            article.system_id systemId,
+            article.ctime ctime,
+            article.orders orders,
             upuser.username
-            from cms_article article left join upms_user upuser on article.user_id = upuser.user_id
+        from cms_article article
+        left join upms_user upuser on article.user_id = upuser.user_id
     </select>
 </mapper>

@@ -12,7 +12,5 @@ public class ArticleService {
     @Autowired
     ArticleBiz articleBiz;
 
-    public List<ArticleInManager> queryForPageBiz(){
-        return null;
-    }
+
 }

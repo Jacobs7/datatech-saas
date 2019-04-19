@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 文章表
@@ -21,8 +22,8 @@ import java.util.List;
 @Transactional(rollbackFor = Exception.class)
 public class ArticleBiz extends BaseBiz<ArticleMapper,Article> {
 
-    public List<ArticleInManager> queryForPageBiz(Example example){
-
-        return mapper.queryForPageBiz(example);
+    public List<Map<String, Object>> queryForPageBiz(Map<String, Object> map){
+        return mapper.queryForPageBiz(map);
     }
+
 }
