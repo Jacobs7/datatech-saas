@@ -26,7 +26,7 @@
 
         <result property="userName" column="username"/>
     </resultMap>
-    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultType="map">
+    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultType="com.datatech.cloud.cms.api.vo.article">
         select
             article.article_id articleId,
             article.topic_id topicId,

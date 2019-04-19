@@ -1,6 +1,7 @@
 package com.datatech.cloud.cms.rest;
 
 
+import com.datatech.cloud.cms.api.vo.article.ArticleInfo;
 import com.datatech.cloud.cms.biz.ArticleBiz;
 import com.datatech.cloud.cms.entity.Article;
 import com.datatech.cloud.cms.rpc.service.ArticleService;
@@ -51,8 +52,8 @@ public class ArticleController extends BaseController<ArticleBiz,Article> {
 //        PageHelper.startPage(offset, limit);
 //        return new TableResultResponse<Article>(count,articleBiz.queryForPageBiz(example));
 
-        List<Map<String, Object>> list = articleBiz.queryForPageBiz(new HashMap<String, Object>());
-
+//        List<Map<String, Object>> list = articleBiz.queryForPageBiz(new HashMap<String, Object>());
+        List<ArticleInfo> list = articleService.queryForPageBiz(new HashMap<String, Object>());
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("status", 200);
 
