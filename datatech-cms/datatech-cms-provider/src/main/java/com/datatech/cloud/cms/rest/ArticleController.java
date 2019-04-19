@@ -3,6 +3,7 @@ package com.datatech.cloud.cms.rest;
 
 import com.datatech.cloud.cms.biz.ArticleBiz;
 import com.datatech.cloud.cms.entity.Article;
+import com.datatech.cloud.cms.vo.ArticleInManager;
 import com.datatech.cloud.common.msg.TableResultResponse;
 import com.datatech.cloud.common.rest.BaseController;
 import com.github.pagehelper.PageHelper;
@@ -32,14 +33,14 @@ public class ArticleController extends BaseController<ArticleBiz,Article> {
 
     @RequestMapping(value = "/pagetest",method = RequestMethod.GET)
     @ResponseBody
-    public TableResultResponse<Article> pagetest(@RequestParam(defaultValue = "10") int limit, @RequestParam(defaultValue = "1")int offset, String name){
+    public TableResultResponse<ArticleInManager> pagetest(@RequestParam(defaultValue = "10") int limit, @RequestParam(defaultValue = "1")int offset, String name){
 
-        Example example = new Example(Article.class);
+        Example example = new Example(ArticleInManager.class);
         if(StringUtils.isNotBlank(name)) {
             example.createCriteria().andLike("menu", "%" + name + "%");
         }
         int count = baseBiz.selectCountByExample(example);
         PageHelper.startPage(offset, limit);
-        return new TableResultResponse<Article>(count,articleBiz.queryForPageBiz(example));
+        return new TableResultResponse<ArticleInManager>(12,articleBiz.queryForPageBiz(example));
     }
 }

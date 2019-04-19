@@ -48,8 +48,9 @@ public class ArticleInManager implements Serializable {
 
     //发布人id
     private Integer userId;
-    //发布人id
-    private String userName;
+
+    private String username;
+
 
     //阅读数量
     private Integer readnumber;
