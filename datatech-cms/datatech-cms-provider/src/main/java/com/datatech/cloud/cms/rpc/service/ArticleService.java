@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ArticleService {
@@ -18,11 +19,28 @@ public class ArticleService {
     public List<ArticleInfo> queryForPageBiz(HashMap<String,Object> map){
 
 
-        articleBiz.queryForPageBiz(map);
 
-        return null;
+
+        return articleBiz.queryForPageBiz(map);
 
     }
 
+    public List<Map<String,Object>> queryForPageMapBiz(HashMap<String,Object> map){
+
+
+
+
+        return articleBiz.queryForPageMapBiz(map);
+
+    }
+
+    public Long queryForPageCountBiz(HashMap<String,Object> map){
+
+
+
+
+        return articleBiz.queryForPageCountBiz(map);
+
+    }
 
 }

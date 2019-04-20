@@ -26,7 +26,9 @@
 
         <result property="userName" column="username"/>
     </resultMap>
-    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultType="com.datatech.cloud.cms.api.vo.article">
+
+    <!--查询列表-->
+    <select id="queryForPageBiz" parameterType="java.util.HashMap" resultType="com.datatech.cloud.cms.api.vo.article.ArticleInfo">
         select
             article.article_id articleId,
             article.topic_id topicId,
@@ -47,6 +49,39 @@
             article.ctime ctime,
             article.orders orders,
             upuser.username
+        from cms_article article
+        left join upms_user upuser on article.user_id = upuser.user_id
+    </select>
+
+    <!--查询列表-->
+    <select id="queryForPageMapBiz" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+        select
+            article.article_id articleId,
+            article.topic_id topicId,
+            article.title title,
+            article.author author,
+            article.fromurl fromurl,
+            article.image image,
+            article.keywords keywords,
+            article.description description,
+            article.type type,
+            article.allowcomments allowcomments,
+            article.status status,
+            article.content content,
+            article.user_id userId,
+            article.readnumber readnumber,
+            article.top top,
+            article.system_id systemId,
+            article.ctime ctime,
+            article.orders orders,
+            upuser.username
+        from cms_article article
+        left join upms_user upuser on article.user_id = upuser.user_id
+    </select>
+    <!--查询数量-->
+    <select id="queryForPageCountBiz" parameterType="java.util.HashMap" resultType="java.lang.Long">
+        select
+          count(article.article_id) pageCount
         from cms_article article
         left join upms_user upuser on article.user_id = upuser.user_id
     </select>

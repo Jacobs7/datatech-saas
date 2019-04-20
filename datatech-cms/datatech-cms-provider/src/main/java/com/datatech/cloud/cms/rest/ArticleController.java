@@ -8,6 +8,7 @@ import com.datatech.cloud.cms.rpc.service.ArticleService;
 import com.datatech.cloud.cms.vo.ArticleInManager;
 import com.datatech.cloud.common.msg.TableResultResponse;
 import com.datatech.cloud.common.rest.BaseController;
+import com.datatech.cloud.common.util.Query;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,23 +43,29 @@ public class ArticleController extends BaseController<ArticleBiz,Article> {
 
     @RequestMapping(value = "/pagetest",method = RequestMethod.GET)
     @ResponseBody
+    //public TableResultResponse pagetest(@RequestParam(defaultValue = "10") int limit, @RequestParam(defaultValue = "1")int offset, String name){
     public Map<String, Object> pagetest(@RequestParam(defaultValue = "10") int limit, @RequestParam(defaultValue = "1")int offset, String name){
 
-//        Example example = new Example(Article.class);
-//        if(StringUtils.isNotBlank(name)) {
-//            example.createCriteria().andLike("menu", "%" + name + "%");
-//        }
-//        int count = baseBiz.selectCountByExample(example);
-//        PageHelper.startPage(offset, limit);
-//        return new TableResultResponse<Article>(count,articleBiz.queryForPageBiz(example));
 
-//        List<Map<String, Object>> list = articleBiz.queryForPageBiz(new HashMap<String, Object>());
+        // 1  利用框架原有 分页查询控件 Query 分页查询对象
+//          Map queryMap = new HashMap();
+//          Query query = new Query(queryMap);
+//          return articleBiz.selectByQuery(query);
+
+        // 2-1  select result return Serializable Obj
         List<ArticleInfo> list = articleService.queryForPageBiz(new HashMap<String, Object>());
+
+        // 2-1-2  select result return map Obj
+        //List<Map<String,Object>> list = articleService.queryForPageMapBiz(new HashMap<String, Object>());
+
+        // 2-2 select count
+        Long pageCount = articleService.queryForPageCountBiz(new HashMap<String, Object>());
+        // 2-3  result object
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("status", 200);
 
         Map<String, Object> rows = new HashMap<String, Object>();
-        rows.put("total", 100);
+        rows.put("total", pageCount);
         rows.put("rows", list);
 
         result.put("data", rows);

@@ -1,5 +1,6 @@
 package com.datatech.cloud.cms.biz;
 
+import com.datatech.cloud.cms.api.vo.article.ArticleInfo;
 import com.datatech.cloud.cms.entity.Article;
 import com.datatech.cloud.cms.mapper.ArticleMapper;
 import com.datatech.cloud.common.biz.BaseBiz;
@@ -21,12 +22,18 @@ import java.util.Map;
 @Transactional(rollbackFor = Exception.class)
 public class ArticleBiz extends BaseBiz<ArticleMapper,Article> {
 
-//    public List<Article> queryForPageBiz(Example example){
-//
-//        return mapper.queryForPageBiz(example);
-//    }
 
-    public List<Map<String, Object>> queryForPageBiz(Map<String, Object> map){
+
+//    public List<Map<String, Object>> queryForPageBiz(Map<String, Object> map){
+//        return mapper.queryForPageBiz(map);
+//    }
+    public List<ArticleInfo> queryForPageBiz(Map<String, Object> map){
         return mapper.queryForPageBiz(map);
     }
+
+    public List<Map<String,Object>> queryForPageMapBiz(Map<String, Object> map){
+        return mapper.queryForPageMapBiz(map);
+    }
+
+    public Long queryForPageCountBiz(Map<String,Object> map) { return mapper.queryForPageCountBiz(map); }
 }
