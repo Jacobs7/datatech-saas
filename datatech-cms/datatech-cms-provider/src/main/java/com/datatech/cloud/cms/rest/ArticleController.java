@@ -43,23 +43,27 @@ public class ArticleController extends BaseController<ArticleBiz,Article> {
 
     @RequestMapping(value = "/pagetest",method = RequestMethod.GET)
     @ResponseBody
-    //public TableResultResponse pagetest(@RequestParam(defaultValue = "10") int limit, @RequestParam(defaultValue = "1")int offset, String name){
-    public Map<String, Object> pagetest(@RequestParam(defaultValue = "10") int limit, @RequestParam(defaultValue = "1")int offset, String name){
+    //public TableResultResponse pagetest(@RequestParam Map<String, Object> params){
+    public Map<String, Object> pagetest(@RequestParam(defaultValue = "10") int limit, @RequestParam(defaultValue = "1")int page, String name){
 
 
         // 1  利用框架原有 分页查询控件 Query 分页查询对象
-//          Map queryMap = new HashMap();
-//          Query query = new Query(queryMap);
-//          return articleBiz.selectByQuery(query);
+
+        //查询列表数据
+//      Query query = new Query(params);
+//      return articleBiz.selectByQuery(query);
 
         // 2-1  select result return Serializable Obj
-        List<ArticleInfo> list = articleService.queryForPageBiz(new HashMap<String, Object>());
+        HashMap<String,Object> map = new HashMap();
+        map.put("limit",limit);
+        map.put("page",page);
+        List<ArticleInfo> list = articleService.queryForPageBiz(map);
 
         // 2-1-2  select result return map Obj
         //List<Map<String,Object>> list = articleService.queryForPageMapBiz(new HashMap<String, Object>());
 
         // 2-2 select count
-        Long pageCount = articleService.queryForPageCountBiz(new HashMap<String, Object>());
+        Long pageCount = articleService.queryForPageCountBiz(map);
         // 2-3  result object
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("status", 200);

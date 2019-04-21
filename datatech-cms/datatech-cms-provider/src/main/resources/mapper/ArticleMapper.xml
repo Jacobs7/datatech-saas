@@ -51,6 +51,7 @@
             upuser.username
         from cms_article article
         left join upms_user upuser on article.user_id = upuser.user_id
+        LIMIT ${(page-1)*limit},${limit}
     </select>
 
     <!--查询列表-->
@@ -77,6 +78,7 @@
             upuser.username
         from cms_article article
         left join upms_user upuser on article.user_id = upuser.user_id
+        LIMIT ${(page-1)*limit},${limit}
     </select>
     <!--查询数量-->
     <select id="queryForPageCountBiz" parameterType="java.util.HashMap" resultType="java.lang.Long">
