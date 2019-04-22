@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.datatech.cloud.shop.mapper.LocaltionMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.datatech.cloud.shop.entity.Localtion" id="localtionMap">
+        <result property="id" column="id"/>
+        <result property="shopType" column="shop_type"/>
+        <result property="shopLocation" column="shop_location"/>
+        <result property="shopId" column="shop_id"/>
+    </resultMap>
+
+</mapper>

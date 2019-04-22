@@ -9,11 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>datatech-cms</artifactId>
+    <artifactId>datatech-shop</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>datatech-cms-provider</module>
-        <module>datatech-cms-consumer</module>
+        <module>datatech-shop-provider</module>
     </modules>
 
 
