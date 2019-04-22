@@ -60,7 +60,7 @@ public class ArticleController extends BaseController<ArticleBiz,Article> {
         List<ArticleInfo> list = articleService.queryForPageBiz(map);
 
         // 2-1-2  select result return map Obj
-        //List<Map<String,Object>> list = articleService.queryForPageMapBiz(new HashMap<String, Object>());
+        //List<Map<String,Object>> list = articleService.queryForPageMapBiz(map);
 
         // 2-2 select count
         Long pageCount = articleService.queryForPageCountBiz(map);
