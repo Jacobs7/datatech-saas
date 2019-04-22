@@ -36,6 +36,7 @@ public class AuthClientRunner implements CommandLineRunner {
             refreshUserPubKey();
         }catch(Exception e){
             log.error("初始化加载用户pubKey失败,1分钟后自动重试!",e);
+            e.printStackTrace();
         }
         log.info("初始化加载客户pubKey");
         try {
