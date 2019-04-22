@@ -32,6 +32,7 @@ public class ServiceAuthRestInterceptor extends HandlerInterceptorAdapter {
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         String token = request.getHeader(clientConfiguration.getClientTokenHeader());
         IJWTInfo infoFromToken = clientTokenUtil.getInfoFromToken(token);
+
         String uniqueName = infoFromToken.getUniqueName();
         for(String client: authClientService.getAllowedClient(clientConfiguration.getClientId())){
             if(client.equals(uniqueName)){

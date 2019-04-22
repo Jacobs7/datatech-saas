@@ -48,6 +48,7 @@ public class BaseController<Biz extends BaseBiz,Entity> {
         baseBiz.updateSelectiveById(entity);
         return new ObjectRestResponse<Entity>();
     }
+
     @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     @ResponseBody
     public ObjectRestResponse<Entity> remove(@PathVariable int id){
@@ -60,6 +61,7 @@ public class BaseController<Biz extends BaseBiz,Entity> {
     public List<Entity> all(){
         return baseBiz.selectListAll();
     }
+
     @RequestMapping(value = "/page",method = RequestMethod.GET)
     @ResponseBody
     public TableResultResponse<Entity> list(@RequestParam Map<String, Object> params){

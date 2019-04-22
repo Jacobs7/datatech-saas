@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="datatech-admin" />
         <module name="datatech-admin-inf" />
-        <module name="datatech-cms-consumer" />
+        <module name="datatech-cms-inf" />
         <module name="datatech-cms-provider" />
         <module name="datatech-common" />
         <module name="datatech-gateway" />
@@ -21,6 +21,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="datatech-cache" target="1.8" />
+      <module name="datatech-cms-consumer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -30,6 +31,7 @@
       <module name="datatech-cache" options="-parameters" />
       <module name="datatech-cms" options="" />
       <module name="datatech-cms-consumer" options="-parameters" />
+      <module name="datatech-cms-inf" options="-parameters" />
       <module name="datatech-cms-provider" options="-parameters" />
       <module name="datatech-common" options="-parameters" />
       <module name="datatech-control" options="" />
