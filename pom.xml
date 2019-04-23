@@ -153,6 +153,7 @@
         <module>datatech-modules</module>
         <module>datatech-gateway</module>
         <module>datatech-cms</module>
+        <module>datatech-shop</module>
         <module>datatech-generater</module>
 
     </modules>

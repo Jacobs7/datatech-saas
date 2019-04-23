@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 public class LogRest {
     @Autowired
     private GateLogBiz gateLogBiz;
+
     @RequestMapping(value="/log/save",method = RequestMethod.POST)
     public @ResponseBody
     void saveLog(@RequestBody LogInfo info){

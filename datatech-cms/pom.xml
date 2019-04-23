@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>datatech-cms-provider</module>
-        <module>datatech-cms-consumer</module>
+        <module>datatech-cms-inf</module>
     </modules>
 
 

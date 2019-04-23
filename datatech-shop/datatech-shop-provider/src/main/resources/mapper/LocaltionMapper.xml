@@ -4,7 +4,7 @@
 <mapper namespace="com.datatech.springcloud.shop.mapper.LocaltionMapper">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.datatech.springcloud.shop.entity.Localtion" id="localtionMap">
+    <resultMap type="com.datatech.cloud.shop.entity.Localtion" id="localtionMap">
         <result property="id" column="id"/>
         <result property="shopType" column="shop_type"/>
         <result property="shopLocation" column="shop_location"/>

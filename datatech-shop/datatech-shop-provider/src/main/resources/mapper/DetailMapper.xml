@@ -4,7 +4,7 @@
 <mapper namespace="com.datatech.springcloud.shop.mapper.DetailMapper">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.datatech.springcloud.shop.entity.Detail" id="detailMap">
+    <resultMap type="com.datatech.cloud.shop.entity.Detail" id="detailMap">
         <result property="id" column="id"/>
         <result property="shopName" column="shop_name"/>
         <result property="shopPrice" column="shop_price"/>

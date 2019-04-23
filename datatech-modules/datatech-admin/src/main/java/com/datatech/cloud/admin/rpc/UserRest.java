@@ -19,6 +19,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("api")
 public class UserRest {
+
     @Autowired
     private PermissionService permissionService;
 

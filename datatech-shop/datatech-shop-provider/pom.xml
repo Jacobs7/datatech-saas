@@ -183,7 +183,7 @@
     </dependencies>
 
     <build>
-        <finalName>cms-provider-one</finalName>
+        <finalName>shop-provider-one</finalName>
         <plugins>
             <!-- 此插件用来生成通用mapper的代码 -->
             <plugin>

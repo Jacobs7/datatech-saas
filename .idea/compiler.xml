@@ -14,6 +14,7 @@
         <module name="datatech-gateway" />
         <module name="datatech-generater" />
         <module name="datatech-monitor" />
+        <module name="datatech-shop-provider" />
         <module name="datatech-upms-client" />
         <module name="datatech-upms-common" />
         <module name="datatech-upms-server" />
@@ -39,6 +40,7 @@
       <module name="datatech-generater" options="-parameters" />
       <module name="datatech-modules" options="" />
       <module name="datatech-monitor" options="-parameters" />
+      <module name="datatech-shop-provider" options="-parameters" />
       <module name="datatech-upms-client" options="-parameters" />
       <module name="datatech-upms-common" options="-parameters" />
       <module name="datatech-upms-server" options="-parameters" />
