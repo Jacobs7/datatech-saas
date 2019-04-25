@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-cms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-cms/datatech-cms-inf" charset="UTF-8" />
@@ -19,5 +19,6 @@
     <file url="file://$PROJECT_DIR$/datatech-upms/datatech-upms-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-upms/datatech-upms-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datatech-upms/datatech-upms-server" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
