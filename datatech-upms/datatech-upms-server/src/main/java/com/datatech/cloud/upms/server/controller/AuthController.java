@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("jwt")
@@ -30,6 +31,8 @@ public class AuthController {
         final String token = authService.login(authenticationRequest);
         return new ObjectRestResponse<>().data(token);
     }
+
+
 
     @RequestMapping(value = "refresh", method = RequestMethod.GET)
     public ObjectRestResponse<String> refreshAndGetAuthenticationToken(

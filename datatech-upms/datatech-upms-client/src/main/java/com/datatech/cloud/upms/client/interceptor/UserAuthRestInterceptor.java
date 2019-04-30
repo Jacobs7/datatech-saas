@@ -33,12 +33,18 @@ public class UserAuthRestInterceptor extends HandlerInterceptorAdapter {
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         // 配置该注解，说明不进行用户拦截
         IgnoreUserToken annotation = handlerMethod.getBeanType().getAnnotation(IgnoreUserToken.class);
+
+        //不带注解添加
         if (annotation == null) {
             annotation = handlerMethod.getMethodAnnotation(IgnoreUserToken.class);
         }
+
+        //带注解不进行拦截
         if (annotation != null) {
-            return super.preHandle(request, response, handler);
+            return super.preHandle(request, response, handler);//直接运行不执行 后面的 程序
         }
+
+
         String token = request.getHeader(userAuthConfig.getTokenHeader());
         if (StringUtils.isEmpty(token)) {
             if (request.getCookies() != null) {

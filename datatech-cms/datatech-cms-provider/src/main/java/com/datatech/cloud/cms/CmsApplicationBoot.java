@@ -2,6 +2,7 @@ package com.datatech.cloud.cms;
 
 import com.ace.cache.EnableAceCache;
 import com.datatech.cloud.upms.client.EnableAceAuthClient;
+import com.datatech.cloud.upms.client.annotation.IgnoreUserToken;
 import com.spring4all.swagger.EnableSwagger2Doc;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,6 +29,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @MapperScan("com.datatech.cloud.cms.mapper")  //com.github.wxiaoqi.security.admin.mapper
 @EnableSwagger2Doc
+
+
 public class CmsApplicationBoot {
     public static void main(String[] args) {
         new SpringApplicationBuilder(CmsApplicationBoot.class).run(args);    }
